@@ -87,9 +87,11 @@ public class MainActivity extends AppCompatActivity {
                                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                         // This method is called once with the initial value and again
                                         // whenever data at this location is updated.
+                                        String des = dataSnapshot.child("Description").getValue(String.class);
                                         long value = dataSnapshot.child("Inventory").getValue(long.class);
+                                        String loc = dataSnapshot.child("Location").getValue(String.class);
                                         //HashMap value = DataSnapshot.getValue(HashMap.class);
-                                        Toast.makeText(MainActivity.this, "The Inventory is "+String.valueOf(value), Toast.LENGTH_LONG).show();
+                                        Toast.makeText(MainActivity.this, "Description: "+des+"\nThe Inventory is "+String.valueOf(value)+"\nThe Location is at "+loc, Toast.LENGTH_LONG).show();
                                         Log.d(TAG, "Value is: " + value);
                                         //Post post = dataSnapshot.getValue(Post.class);
                                         //for(DataSnasphot datas: dataSnapshot.getChildren()){
