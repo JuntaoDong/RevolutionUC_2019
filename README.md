@@ -1,3 +1,3 @@
 # RevolutionUC_2019
 
-![image](\uc.png)
+![image](https://github.com/JuntaoDong/RevolutionUC_2019/blob/master/uc.png)
